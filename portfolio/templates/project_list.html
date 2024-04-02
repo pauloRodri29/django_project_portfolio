@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Rodrigues - Projetos</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Projetos</h1>
+        </div>
+        <ul>
+            {% for project in projects %}
+                <li>
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.description }}</p>
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    
+</body>
+</html>
