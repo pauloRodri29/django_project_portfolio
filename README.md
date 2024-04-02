@@ -26,4 +26,4 @@
 
    ## Licença
 
-  <p>Pode usar meu projeto como modelo para seu desenvolvimento. Agradeço por visitar meu portfólio pessoal. Espero que você encontre algo interessante</p>
+  <p>Espero que você encontre algo interessante</p>
