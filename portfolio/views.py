@@ -8,7 +8,3 @@ def home(request):
     context = {'profile': Profile.objects.first(),'skills': SkillAndKnowledge.objects.all(), 'certificates': Certificates.objects.all(), 'projects': Project.objects.all()[:3]}
     #rederencia com os dados no contexto
     return render(request, 'home.html', context)
-
-def project_list(request):
-    projects = Project.objects.all()
-    return render(request, 'project_list.html', {'projects': projects}) 

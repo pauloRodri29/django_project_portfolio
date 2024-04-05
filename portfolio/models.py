@@ -28,7 +28,7 @@ class Profile(models.Model):# Modelo de Perfil
     text = models.TextField()
     career = models.TextField()
     image = models.ImageField(upload_to='media/profile_images/')
-    curriculum = models.FileField(upload_to='media/profile_pdf_curriculum/')
+    curriculum = models.FileField(upload_to='media/profile_pdf_curriculum/',unique=True,)
    
     def __str__(self):
         return "Profile"

@@ -19,4 +19,34 @@ document.querySelector('#bnt-menu-nav').addEventListener('click', function() {
     });
 });
 
+const animateItem = document.querySelectorAll('.animate-item')
+const animateContainer = document.querySelectorAll('.animate-container')
+
+const myObseverItem = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-item-active')
+        }else{
+            entry.target.classList.remove('animate-item-active')
+        }
+    })
+})
+
+const myObseverContainer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-container-active')
+        }else{
+            entry.target.classList.remove('animate-container-active')
+        }
+    })
+})
+
+animateContainer.forEach(container => {
+    myObseverContainer.observe(container)
+})
+
+animateItem.forEach(item => {
+    myObseverItem.observe(item)
+})
   
