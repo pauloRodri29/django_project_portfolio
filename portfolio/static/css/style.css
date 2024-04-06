@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --var-color-darker: #151515;
+  --var-color-darker: #0e0c0c;
   --var-color-dark: #111111;
   --var-color-write: #ffffff;
-  --var-color-main: #c4c008;
+  --var-color-main: #4b0404;
   --var-color-soft: #e7e7e7;
 }
 
@@ -161,15 +161,9 @@ header nav a:hover {
 }
 
 .skills-knowledge,
-.contacts {
-  background-color: var(--var-color-main);
-  color: #0c0c0c;
-  border-radius: 8px;
-}
-
-.skills-knowledge,
 .contacts,
 .projects {
+  border-radius: 8px;
   margin: 20px 12px;
   padding: 20px 12px;
 }
@@ -180,16 +174,19 @@ header nav a:hover {
 }
 
 .skills-knowledge .skills-knowledge-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 /*Estilo da imagem e texto do card das habilidades e conhecimentos*/
 .skills-knowledge .skills-knowledge-content .skill-item {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
   align-items: center;
+  background-color: var(--var-color-main);
 }
 
 .skills-knowledge .skills-knowledge-content .skill-item:hover{
@@ -207,7 +204,6 @@ header nav a:hover {
 }
 
 .projects .projects-content {
-  color: var(--var-color-main);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -222,7 +218,7 @@ header nav a:hover {
   padding: 12px;
   border-radius: 20px;
   color: var(--var-color-soft);
-  background-color: var(--var-color-dark);
+  background-color: var(--var-color-main);
 }
 .projects .projects-content .project:hover{
   transform: scale(1.2,1.2);
@@ -233,11 +229,15 @@ header nav a:hover {
   margin: 16px;
 }
 
-.projects .projects-content .project .project-button a div:hover{
-  background-color: var(--var-color-main);
+.projects .projects-content .project .project-button a div{
+  background-color: var(--var-color-soft);
   color: var(--var-color-darker);
 }
 
+.projects .projects-content .project .project-button a div:hover{
+  background-color: var(--var-color-darker);
+  color: var(--var-color-soft);
+}
 
 .bnt-link {
   background-color: black;
