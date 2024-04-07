@@ -17,7 +17,7 @@ class SkillAndKnowledge(models.Model):# Modelo de Conhecimentos e Habilidades
 
 class Certificates(models.Model):# Modelo de Certificados
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    description = models.TextField()
     date = models.DateField()
     certificatePDF = models.FileField(upload_to='media/certificate_pdf/')
     
@@ -26,7 +26,7 @@ class Certificates(models.Model):# Modelo de Certificados
 
 class Profile(models.Model):# Modelo de Perfil
     text = models.TextField()
-    career = models.TextField()
+    career = models.CharField(max_length=100)
     image = models.ImageField(upload_to='media/profile_images/')
     curriculum = models.FileField(upload_to='media/profile_pdf_curriculum/',unique=True,)
    
