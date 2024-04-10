@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-otln6$da*pt&7i&muh8wdjj8_vabv60iex!1+3zl6nby)r6@u@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1' ,'paulorodrigues29.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1' ,'paulorodrigues29.pythonanywhere.com', 'PauloRodrigues29.mysql.pythonanywhere-services.com']
 
 
 # Application definition
@@ -67,8 +67,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'PauloRodrigues29$portfolio',
+        'USER': 'PauloRodrigues29',
+        'PASSWORD': 'paulo1998j',
+        'HOST': 'PauloRodrigues29.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
     }
 }
 
