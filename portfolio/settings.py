@@ -68,13 +68,29 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PauloRodrigues29$portfolio',
-        'USER': 'PauloRodrigues29',
-        'PASSWORD': 'paulo1998j',
-        'HOST': 'PauloRodrigues29.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'NAME': 'rootTestes',  # Nome do seu banco de dados local
+        'USER': 'root',   # Nome do seu usuário do MySQL local
+        'PASSWORD': 'root123', # Senha do seu usuário do MySQL local
+        'HOST': 'localhost',     # Endereço do host do seu MySQL local
+        'PORT': '3306',          # Porta do seu MySQL local
+        'OPTIONS':{
+        'charset': 'utf8mb4',
+        'collation': 'utf8mb4_unicode_ci',
+        # 'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'PauloRodrigues29$portfolio',
+#         'USER': 'PauloRodrigues29',
+#         'PASSWORD': 'paulo1998j',
+#         'HOST': 'PauloRodrigues29.mysql.pythonanywhere-services.com',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
