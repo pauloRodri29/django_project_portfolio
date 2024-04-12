@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --var-color-dark-soft: #201e1e; /*Cor para card ou caixa de sobreposição*/
-  --var-color-dark-text: #000000; /*Cor para texto*/
   --var-color-dark: #080707; /*Cor do tema escuro*/
-  --var-color-write: #ffffff; /*Cor do tema branco*/
+  --var-color-write: #6d5d5d; /*Cor do tema branco*/
   --var-color-main: #681515; /*Cor principal de destaque*/
+  --var-color-soft-text: #e7e7e7; /*Cor de textos de cards e botões*/
+  --var-color-dark-text: #000000; /*Cor para texto*/
+  --var-color-light-text: #f0f0f0; /*Cor para texto*/
   --var-color-shadows: rgba(248, 0, 0, 0.2); /*Cor principal de destaque*/
-  --var-color-soft-title: #e7e7e7; /*Cor de titulos*/
+  --var-color-dark-soft: #201e1e; /*Cor para card ou caixa de sobreposição*/
 }
 
 /*--------- Configurações Padrões ---------*/
@@ -24,7 +25,7 @@ html {
 
 body {
   background-color: var(--var-color-dark);
-  color: var(--var-color-soft-title);
+  color: var(--var-color-light-text);
   font-size: 100%;
 }
 
@@ -52,7 +53,7 @@ body {
 /*Tag a de link*/
 a {
   text-decoration: none;
-  color: var(--var-color-soft-title);
+  color: var(--var-color-light-text);
 }
 /*Tag Botão*/
 .btn {
@@ -72,7 +73,7 @@ header {
 }
 
 header nav a:hover {
-  color: var(--var-color-soft-title);
+  color: var(--var-color-soft-text);
   backdrop-filter: blur(114px); 
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
@@ -141,13 +142,12 @@ header nav a:hover {
 }
 
 #bnt-curricule .bnt-curriculum:hover {
-  color: var(--var-color-soft-title);
+  color: var(--var-color-soft-text);
   transform: scale(1.1,1.1);
   transition: all 0.5s ease-in-out;
   backdrop-filter: blur(114px); 
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
-  
 }
 
 #primary-content .right-content {
@@ -192,7 +192,7 @@ header nav a:hover {
   padding: 10px;
   border-radius: 10px;
   align-items: center;
-  color: var(--var-color-soft-title);
+  color: var(--var-color-soft-text);
   backdrop-filter: blur(114px); 
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
@@ -226,7 +226,7 @@ header nav a:hover {
   max-width: 400px;
   padding: 12px;
   border-radius: 20px;
-  color: var(--var-color-soft-title);
+  color: var(--var-color-soft-text);
   backdrop-filter: blur(114px); 
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
@@ -241,13 +241,13 @@ header nav a:hover {
 }
 
 .projects .projects-content .project .project-button a div{
-  background-color: var(--var-color-soft-title);
-  color: var(--var-color-dark);
+  background-color: var(--var-color-soft-text);
+  color: var(--var-color-dark-text);
 }
 
 .projects .projects-content .project .project-button a div:hover{
   background-color: var(--var-color-dark-soft);
-  color: var(--var-color-soft-title);
+  color: var(--var-color-soft-text);
 }
 
 .bnt-link {
@@ -287,7 +287,7 @@ footer {
 }
 
 footer hr {
-  color: var(--var-color-soft-title);
+  color: var(--var-color-light-text);
   border-width: 2px;
 }
 
@@ -392,7 +392,7 @@ footer hr {
 
   #content-header nav {
     flex-direction: column;
-    background-color: var(--var-color-soft-title);
+    background-color: var(--var-color-light-text);
     border-radius: 12px;
     padding: 12px;
     min-width: 180px;
@@ -411,7 +411,7 @@ footer hr {
   }
   /*Botão Menu*/
   #bnt-menu-nav {
-    background-color: var(--var-color-soft-title);
+    background-color: var(--var-color-light-text);
     display: block;
     position: fixed;
     bottom: 10px;
