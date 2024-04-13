@@ -2,9 +2,9 @@
 
    ## Bem-vindo(a) ao meu Portfólio Pessoal!
 
-   <img src="https://giffiles.alphacoders.com/220/220121.gif" style="width:250px; height: 300px; box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5);" alt="Aletatória rsrs">
+   <img src="https://giffiles.alphacoders.com/212/212449.gif" style="width:250px; height: 300px; box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5);" alt="Aletatória rsrs">
 
- <p/> 
+ </p> 
 
   <p>Este é o repositório do meu portfólio pessoal, onde compartilho informações sobre mim, meus projetos e meu trabalho como desenvolvedor. Aqui você encontrará uma visão geral das minhas habilidades, experiências e projetos recentes. Fique à vontade para explorar!</p>
 
