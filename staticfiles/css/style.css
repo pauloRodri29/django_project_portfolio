@@ -32,22 +32,22 @@ body {
 /*Animação da página com scroll*/
  .animate-item{
   opacity: 0;
-  transition: all 1s;
+  transition: all 1s ease-in-out;
 }
 
 .animate-item-active{
   opacity: 1;
-  transition: all 2s;
+  transition: all 1s ease-in-out;
 }
 
 .animate-container{
   opacity: 0;
-  transition: all 1s;
+  transition: all 0.8s ease-in-out;
 }
 
 .animate-container-active{
   opacity: 1;
-  transition: all 2s;
+  transition: all 0.8s ease-in-out;
 }
 
 /*Tag a de link*/
@@ -265,10 +265,13 @@ header nav a:hover {
 .contacts .contacts-content .contacts-networking {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 .contacts .contacts-content .contacts-networking .card-contacts:hover{
   transform: scale(1.2,1.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .contacts .contacts-content .contacts-networking .card-contacts{
@@ -283,7 +286,7 @@ footer {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: center; 
 }
 
 footer hr {
@@ -305,11 +308,11 @@ footer hr {
 }
 
 .icon-animation-settings {
-  animation: rotate 5s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
 .icon-django {
-  animation: bounce-bottom 5s infinite;
+  animation: bounce-bottom 4s infinite;
 }
 
 /*Animações*/
@@ -420,7 +423,7 @@ footer hr {
     height: 40px;
     padding: 20px;
     border-radius: 50px;
-    animation: heartbeat 3s infinite;
+    animation: heartbeat 5s infinite;
   }
 
   @keyframes heartbeat {
@@ -455,7 +458,7 @@ footer hr {
     background-color: #000000;
     right: 10%;
     top: 45%;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
   }
 
   .bnt-menu-nav-close span:first-child {
@@ -499,6 +502,11 @@ footer hr {
   }
 
   .icon-contacts {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contacts .contacts-content .contacts-networking .card-contacts a img{
     width: 30px;
     height: 30px;
   }
