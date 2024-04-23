@@ -296,6 +296,7 @@ footer hr {
 
 .company-information{
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding: 8px;
@@ -304,11 +305,7 @@ footer hr {
 .company-information img{
   max-width: 100px;
   max-height: 100px;
-  border-radius: 50px;
-}
-
-.company-information p{
-  width: 40%;
+  border-radius: 100px;
 }
 
 .footer-content {
