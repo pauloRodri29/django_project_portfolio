@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-otln6$da*pt&7i&muh8wdjj8_vabv60iex!1+3zl6nby)r6@u@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1' ,'paulorodrigues29.pythonanywhere.com', 'PauloRodrigues29.mysql.pythonanywhere-services.com']
 
@@ -65,32 +65,32 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rootTestes',  # Nome do seu banco de dados local
-        'USER': 'root',   # Nome do seu usuário do MySQL local
-        'PASSWORD': 'root123', # Senha do seu usuário do MySQL local
-        'HOST': 'localhost',     # Endereço do host do seu MySQL local
-        'PORT': '3306',          # Porta do seu MySQL local
-        'OPTIONS':{
-        'charset': 'utf8mb4',
-        'collation': 'utf8mb4_unicode_ci',
-        # 'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'PauloRodrigues29$portfolio',
-#         'USER': 'PauloRodrigues29',
-#         'PASSWORD': 'paulo1998j',
-#         'HOST': 'PauloRodrigues29.mysql.pythonanywhere-services.com',
-#         'PORT': '3306',
+#         'NAME': 'rootTestes',  # Nome do seu banco de dados local
+#         'USER': 'root',   # Nome do seu usuário do MySQL local
+#         'PASSWORD': 'root123', # Senha do seu usuário do MySQL local
+#         'HOST': 'localhost',     # Endereço do host do seu MySQL local
+#         'PORT': '3306',          # Porta do seu MySQL local
+#         'OPTIONS':{
+#         'charset': 'utf8mb4',
+#         'collation': 'utf8mb4_unicode_ci',
+#         'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+#         }
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'PauloRodrigues29$portfolio',
+        'USER': 'PauloRodrigues29',
+        'PASSWORD': 'paulo1998j',
+        'HOST': 'PauloRodrigues29.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
