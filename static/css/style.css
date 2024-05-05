@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --var-color-dark: #080707; /*Cor do tema escuro*/
+  --var-valueEixoX: 1.05;
+  --var-valueEixoY: 1.05;
+  --var-color-dark: #080808; /*Cor do tema escuro*/
   --var-color-write: #6d5d5d; /*Cor do tema branco*/
-  --var-color-main: #681515; /*Cor principal de destaque*/
+  --var-color-main:#680b0b; /*Cor principal de destaque*/
   --var-color-soft-text: #e7e7e7; /*Cor de textos de cards e botões*/
   --var-color-dark-text: #000000; /*Cor para texto*/
   --var-color-light-text: #f0f0f0; /*Cor para texto*/
-  --var-color-shadows: rgba(248, 0, 0, 0.2); /*Cor principal de destaque*/
+  --var-color-shadows: #9900007e; /*Cor principal de destaque*/
   --var-color-dark-soft: #201e1e; /*Cor para card ou caixa de sobreposição*/
 }
 
@@ -30,22 +32,22 @@ body {
 }
 
 /*Animação da página com scroll*/
- .animate-item{
+.animate-item {
   opacity: 0;
   transition: all 1s ease-in-out;
 }
 
-.animate-item-active{
+.animate-item-active {
   opacity: 1;
   transition: all 1s ease-in-out;
 }
 
-.animate-container{
+.animate-container {
   opacity: 0;
   transition: all 0.8s ease-in-out;
 }
 
-.animate-container-active{
+.animate-container-active {
   opacity: 1;
   transition: all 0.8s ease-in-out;
 }
@@ -74,7 +76,7 @@ header {
 
 header nav a:hover {
   color: var(--var-color-soft-text);
-  backdrop-filter: blur(114px); 
+  backdrop-filter: blur(114px);
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
   transition: all 0.5s ease-in-out;
@@ -100,7 +102,7 @@ header nav a:hover {
 #right-nav {
   display: flex;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
 }
 
 .my-logo {
@@ -143,9 +145,9 @@ header nav a:hover {
 
 #bnt-curricule .bnt-curriculum:hover {
   color: var(--var-color-soft-text);
-  transform: scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
   transition: all 0.5s ease-in-out;
-  backdrop-filter: blur(114px); 
+  backdrop-filter: blur(114px);
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
 }
@@ -193,13 +195,13 @@ header nav a:hover {
   border-radius: 10px;
   align-items: center;
   color: var(--var-color-soft-text);
-  backdrop-filter: blur(114px); 
+  backdrop-filter: blur(114px);
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
 }
 
-.skills-knowledge .skills-knowledge-content .skill-item:hover{
-  transform: scale(1.2,1.2);
+.skills-knowledge .skills-knowledge-content .skill-item:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .skills-knowledge .skills-knowledge-content .skill-item img {
@@ -227,12 +229,13 @@ header nav a:hover {
   padding: 12px;
   border-radius: 20px;
   color: var(--var-color-soft-text);
-  backdrop-filter: blur(114px); 
+  backdrop-filter: blur(114px);
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
 }
-.projects .projects-content .project:hover{
-  transform: scale(1.2,1.2);
+
+.projects .projects-content .project:hover {
+  transform: scale(var(--var-valueEixoX), var(--var-valueEixoY));
 }
 
 .projects .projects-content .project .project-button {
@@ -240,12 +243,12 @@ header nav a:hover {
   margin: 16px;
 }
 
-.projects .projects-content .project .project-button a div{
+.projects .projects-content .project .project-button a div {
   background-color: var(--var-color-soft-text);
   color: var(--var-color-dark-text);
 }
 
-.projects .projects-content .project .project-button a div:hover{
+.projects .projects-content .project .project-button a div:hover {
   background-color: var(--var-color-dark-soft);
   color: var(--var-color-soft-text);
 }
@@ -269,15 +272,15 @@ header nav a:hover {
   align-items: center;
   gap: 20px;
 }
-.contacts .contacts-content .contacts-networking .card-contacts:hover{
-  transform: scale(1.2,1.2);
+.contacts .contacts-content .contacts-networking .card-contacts:hover {
+  transform: scale(1.2, 1.2);
   transition: all 0.5s ease-in-out;
 }
 
-.contacts .contacts-content .contacts-networking .card-contacts{
+.contacts .contacts-content .contacts-networking .card-contacts {
   padding: 12px;
   border-radius: 12px;
-  backdrop-filter: blur(114px); 
+  backdrop-filter: blur(114px);
   box-shadow: 0 15px 40px var(--var-color-shadows);
   background-color: var(--var-color-main);
 }
@@ -286,7 +289,7 @@ footer {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  text-align: center; 
+  text-align: center;
 }
 
 footer hr {
@@ -294,7 +297,7 @@ footer hr {
   border-width: 2px;
 }
 
-.company-information{
+.company-information {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -302,7 +305,7 @@ footer hr {
   padding: 8px;
 }
 
-.company-information img{
+.company-information img {
   max-width: 100px;
   max-height: 100px;
   border-radius: 100px;
@@ -440,7 +443,7 @@ footer hr {
   }
 
   .menu-open {
-    bottom: 60px;
+    bottom: 80px;
     right: 10px;
   }
   /*Botão Menu*/
@@ -450,11 +453,11 @@ footer hr {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     padding: 20px;
     border-radius: 50px;
-    animation: heartbeat 5s infinite;
+    animation: heartbeat 6s infinite;
   }
 
   @keyframes heartbeat {
@@ -537,7 +540,7 @@ footer hr {
     height: 30px;
   }
 
-  .contacts .contacts-content .contacts-networking .card-contacts a img{
+  .contacts .contacts-content .contacts-networking .card-contacts a img {
     width: 30px;
     height: 30px;
   }
