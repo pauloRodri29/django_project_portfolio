@@ -5,7 +5,7 @@
   --var-valueEixoY: 1.05;
   --var-color-dark: #080808; /*Cor do tema escuro*/
   --var-color-write: #6d5d5d; /*Cor do tema branco*/
-  --var-color-main:#680b0b; /*Cor principal de destaque*/
+  --var-color-main: #680b0b; /*Cor principal de destaque*/
   --var-color-soft-text: #e7e7e7; /*Cor de textos de cards e botões*/
   --var-color-dark-text: #000000; /*Cor para texto*/
   --var-color-light-text: #f0f0f0; /*Cor para texto*/
@@ -166,6 +166,38 @@ header nav a:hover {
 
 #primary-content .right-content .right-content-text h3 {
   margin-bottom: 24px;
+}
+
+.my-work {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 10px;
+}
+
+.my-work section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px var(--var-color-shadows);
+  background-color: var(--var-color-main);
+}
+
+.my-work section p {
+  margin: 10px 0;
+}
+
+.my-work section h3 {
+  margin: 10px 0;
+}
+
+.my-work section:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .skills-knowledge,
@@ -543,5 +575,16 @@ footer hr {
   .contacts .contacts-content .contacts-networking .card-contacts a img {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (width <= 550px) {
+  .my-work {
+    flex-wrap: wrap;
+  }
+
+  .my-work section{
+    width: 80%;
+    height: 80%;
   }
 }
