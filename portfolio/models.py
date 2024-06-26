@@ -17,9 +17,9 @@ class SkillAndKnowledge(models.Model):# Modelo de Conhecimentos e Habilidades
 
 class Certificates(models.Model):# Modelo de Certificados
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    organizer = models.CharField(max_length=50)
     date = models.DateField()
-    certificatePDF = models.FileField(upload_to='media/certificate_pdf/')
+    certificatePDF = models.URLField()
     
     def __str__(self):
         return self.title

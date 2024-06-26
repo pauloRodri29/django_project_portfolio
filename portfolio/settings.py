@@ -1,21 +1,17 @@
 import os
 from pathlib import Path
+from decouple import config
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-otln6$da*pt&7i&muh8wdjj8_vabv60iex!1+3zl6nby)r6@u@'
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1' ,'paulorodrigues29.pythonanywhere.com', 'PauloRodrigues29.mysql.pythonanywhere-services.com']
-
+ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='').split(',')
 
 # Application definition
 
@@ -65,30 +61,32 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# Banco de dados para testes
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'rootTestes',  # Nome do seu banco de dados local
-#         'USER': 'root',   # Nome do seu usuário do MySQL local
-#         'PASSWORD': 'root123', # Senha do seu usuário do MySQL local
-#         'HOST': 'localhost',     # Endereço do host do seu MySQL local
-#         'PORT': '3306',          # Porta do seu MySQL local
-#         'OPTIONS':{
-#         'charset': 'utf8mb4',
-#         'collation': 'utf8mb4_unicode_ci',
-#         'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+#         'PORT': config('DB_PORT'),
+#         'OPTIONS': {
+#             'charset': 'utf8mb4',
+#             'collation': 'utf8mb4_unicode_ci',
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
 #         }
 #     }
 # }
 
+# Banco de dados para produção (descomentando para uso)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PauloRodrigues29$portfolio',
-        'USER': 'PauloRodrigues29',
-        'PASSWORD': 'paulo1998j',
-        'HOST': 'PauloRodrigues29.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'NAME': config('DB_NAME_PROD'),
+        'USER': config('DB_USER_PROD'),
+        'PASSWORD': config('DB_PASSWORD_PROD'),
+        'HOST': config('DB_HOST_PROD'),
+        'PORT': config('DB_PORT_PROD'),
     }
 }
 
@@ -109,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
- 
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -122,11 +119,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [

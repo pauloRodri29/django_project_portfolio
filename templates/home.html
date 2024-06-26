@@ -39,14 +39,17 @@
             >Sobre Mim</a
           >
           <a href="#id-projects" class="btn animate-item click-btn">Projetos</a>
+          <a href="#id-certificates" class="btn animate-item click-btn"
+            >Certificações</a
+          >
           <a href="#id-contacts" class="btn animate-item click-btn">Contatos</a>
         </nav>
       </div>
     </header>
     <!--  -->
     <main>
-      <div id="primary-content">
-        <section class="left-content">
+      <section id="primary-content">
+        <div class="left-content">
           <div id="photo-user">
             <abbr title="João Paulo Rodrigues de Melo">
               <img
@@ -67,8 +70,8 @@
               </button>
             </abbr>
           </div>
-        </section>
-        <section class="right-content">
+        </div>
+        <div class="right-content">
           <div class="right-content-text">
             <h1 id="title-presentation" class="animate-item">Sobre Mim</h1>
             <h3
@@ -79,12 +82,13 @@
             </h3>
             <p id="text-apresentation" class="animate-item">{{profile.text}}</p>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="my-work">
-        <section class="card-1 animate-container">
-          <img class="animate-item"
+      <section class="my-work">
+        <div class="card-1 animate-container">
+          <img
+            class="animate-item"
             width="60"
             height="60"
             src="https://img.icons8.com/ios/60/ffffff/windows10-personalization.png"
@@ -92,33 +96,39 @@
           />
           <h3>UI/UX Design</h3>
           <p>
-            Desenvolvimento de uma interface visual atrativa e intuitiva, facilitando a interação eficiente e eficaz dos usuários com o produto.
+            Desenvolvo interfaces visualmente atraentes e intuitivas, que facilitam uma interação eficiente e eficaz dos usuários com o produto.
           </p>
-        </section>
-        <section class="card-2 animate-container">
-          <img class="animate-item"
+        </div>
+        <div class="card-2 animate-container">
+          <img
+            class="animate-item"
             width="60"
             height="60"
             src="https://img.icons8.com/ios/60/ffffff/developer-mode--v1.png"
             alt="developer-mode--v1"
           />
           <h3>Desenvolvimento Mobile</h3>
-          <p>Desenvolvimento de aplicativos com Flutter e Dart para alta qualidade e desempenho, possibilitando a criação de apps multiplataforma.</p>
-        </section>
-        <section class="card-1 animate-container">
-          <img class="animate-item"
+          <p>
+            Desenvolvo aplicativos utilizando o framework Flutter em conjunto com a linguagem Dart, com foco em oferecer alta qualidade e desempenho, permitindo a criação de aplicativos multiplataforma.
+          </p>
+        </div>
+        <div class="card-1 animate-container">
+          <img
+            class="animate-item"
             width="60"
             height="60"
             src="https://img.icons8.com/ios/60/ffffff/web.png"
             alt="web"
           />
           <h3>Desenvolvimento Web</h3>
-          <p>Desenvolvimento de sites usando diversas Frameworks e linguagens de programação como Django e Python de forma rápida e eficiente. </p>
-        </section>
-      </div>
+          <p>
+            Desenvolvo sites de forma rápida e eficiente utilizando frameworks e linguagens de programação como Django e Python.
+          </p>
+        </div>
+      </section>
 
       <!--  -->
-      <div class="skills-knowledge animate-container">
+      <section class="skills-knowledge animate-container">
         <div class="title-session">
           <h1 class="animate-item">Conhecimentos e Habilidades</h1>
         </div>
@@ -136,9 +146,10 @@
           </div>
           {% endfor %}
         </div>
-      </div>
+      </section>
+
       <!--  -->
-      <div class="projects" id="id-projects">
+      <section class="projects" id="id-projects">
         <div class="title-session">
           <h1 class="animate-item">Projetos</h1>
         </div>
@@ -157,9 +168,33 @@
           </div>
           {% endfor %}
         </div>
-      </div>
+      </section>
+
+      <section class="certificates" id="id-certificates">
+        <div class="title-session">
+          <h1 class="animate-item">Certificações</h1>
+        </div>
+
+        <div class="certificates-content animate-container">
+          {% for item in certificates %}
+
+          <div class="certificates-card">
+            <img
+              src="{{ item.certificatePDF}}"
+              alt=""
+              srcset=""
+            />
+            <p> {{item.title}}</p>
+            <p> <b>Organizador: </b>{{item.organizer}}</p>
+            <p><b>Data: </b> {{item.date}}</p>
+          </div>
+          {% endfor %}
+        </div>
+          
+      </section>
+
       <!--  -->
-      <div class="contacts animate-container" id="id-contacts">
+      <section class="contacts animate-container" id="id-contacts">
         <div class="title-session">
           <h1 class="animate-item">Contatos</h1>
         </div>
@@ -251,7 +286,7 @@
             </abbr>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <!--  -->
     <footer>
