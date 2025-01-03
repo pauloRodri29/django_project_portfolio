@@ -62,33 +62,33 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # Banco de dados para testes
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST'),
-#         'PORT': config('DB_PORT'),
-#         'OPTIONS': {
-#             'charset': 'utf8mb4',
-#             'collation': 'utf8mb4_unicode_ci',
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#         }
-#     }
-# }
-
-# Banco de dados para produção (descomentando para uso)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME_PROD'),
-        'USER': config('DB_USER_PROD'),
-        'PASSWORD': config('DB_PASSWORD_PROD'),
-        'HOST': config('DB_HOST_PROD'),
-        'PORT': config('DB_PORT_PROD'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'collation': 'utf8mb4_unicode_ci',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
+
+# Banco de dados para produção (descomentando para uso)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': config('DB_NAME_PROD'),
+#         'USER': config('DB_USER_PROD'),
+#         'PASSWORD': config('DB_PASSWORD_PROD'),
+#         'HOST': config('DB_HOST_PROD'),
+#         'PORT': config('DB_PORT_PROD'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
